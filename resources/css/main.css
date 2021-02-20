@@ -1,0 +1,85 @@
+@import url('var.css');
+
+/* ============================= estilos header */
+
+/* estilos logo */
+
+.navbar-brand{
+    position: absolute;
+    top: 30px;
+    z-index: 11;
+    padding: 0px;
+    height: 40px;
+    left: 40px;
+}
+
+/* estilos icon-menu */
+
+.navbar-toggle{
+    position: fixed;
+    top: 15px;
+    right: 40px;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+
+.navbar-toggle .icon{
+    width: 12px;
+    height: 2px;
+    background: var(--font-main-color);
+    border-bottom: 5px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, .5); */
+    transition: all .5s ease-in-out;
+    transform: translateX(-4px);
+}
+
+.navbar-toggle .icon::before,
+.navbar-toggle .icon::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    background: var(--font-main-color);
+    border-bottom: 5px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, .5); */
+    transition: all .5s ease-in-out;
+}
+
+.navbar-toggle .icon::before{
+    width: 20px;
+    transform: translateY(-6px);
+}
+
+.navbar-toggle .icon::after{
+    width: 16px;
+    transform: translateY(6px);
+}
+
+/* ANIMATION */
+
+.navbar-toggle.open .icon{
+    transform: translateX(12px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.navbar-toggle.open .icon::before{
+    transform: rotate(45deg) translate(-11px , 11px);
+}
+
+.navbar-toggle.open .icon::after{
+    width: 20px;
+    transform: rotate(-45deg) translate(-11px , -11px);
+}
+
+/* estilos bg-main */
+
+.bg-main{
+
+}
