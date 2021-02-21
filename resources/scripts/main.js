@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
             if(navMenu.classList.contains("close-menu")){
                 
                 if (value > 0) {
-                    if (scroll_value < 30) {
+                    if (scroll_value < 1) {
                         scroll_value += 1;
 
                         
@@ -37,7 +37,7 @@ window.addEventListener("load", () => {
 
         setTimeout(function(){
             canScroll = true;
-        }, 1000);
+        }, 800);
     }
 
     window.addEventListener("touchstart", (e) => {

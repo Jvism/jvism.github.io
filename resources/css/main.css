@@ -5,7 +5,6 @@
 
 body{
     background: var(--light-color);
-    overscroll-behavior: contain;
 }
 
 /* ============================= estilos header */
