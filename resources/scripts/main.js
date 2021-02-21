@@ -27,7 +27,7 @@ window.addEventListener("load", () => {
                         scroll_value -= 1;
                     }
                 }
-                
+
                 animation(scroll_value);
     
             };
@@ -38,7 +38,7 @@ window.addEventListener("load", () => {
         }, 1000);
     }
 
-    window.addEventListener("touchstart", (e) => {
+    document.addEventListener("touchstart", (e) => {
 
         startTouch = e.changedTouches[0].screenY;
 
