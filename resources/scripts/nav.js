@@ -3,7 +3,6 @@ const menuDiv = document.querySelector(".nav-menu");
 const menuOverlay = document.querySelector(".overlay-menu");
 const menuBorders = document.querySelector(".borders");
 
-
 let menuOpen = false;
 
 menuBtn.addEventListener("click", () => {
@@ -22,3 +21,15 @@ menuBtn.addEventListener("click", () => {
         menuOpen = false;
     }
 });
+
+if(window.screen.width <= 768){
+
+    window.addEventListener("load", () => {
+        menuDiv.setAttribute("style", "width:" + (window.screen.width - 85) + "px;")
+    });
+    
+    window.addEventListener("resize",() => {
+        menuDiv.setAttribute("style", "width:" + (window.screen.width - 85) + "px;")
+    });
+}
+

@@ -134,10 +134,16 @@ body{
     transform: translate(0, 100%) scale(1);
 }
 
-
+.borders .left{
+    top: 0;
+    left: 0;
+    height: 100%;
+    transform-origin: left center;
+    transform: translate(-100%, 0) scale(1);
+}
 
 .nav-menu{
-    width: 290px;
+    /* width: 290px; */
     height: 100vh;
     position: fixed;
     top: 0;
