@@ -37,7 +37,7 @@ window.addEventListener("load", () => {
 
         setTimeout(function(){
             canScroll = true;
-        }, 800);
+        }, 400);
     }
 
     window.addEventListener("touchstart", (e) => {
@@ -50,7 +50,7 @@ window.addEventListener("load", () => {
 
         let direction_touchMove = startTouch - endTouch;
 
-        if(direction_touchMove > 100 || direction_touchMove < -100){
+        if(direction_touchMove > 20 || direction_touchMove < -20){
 
             scroll(canScroll,direction_touchMove);
         }

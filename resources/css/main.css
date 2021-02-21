@@ -215,6 +215,7 @@ body{
     display: grid;
     grid-template-columns: repeat(100,1vw);
     grid-template-rows: repeat(100,1vh);
+    overflow: hidden;
 }
 
 /* estilos iniciales app */
@@ -225,7 +226,7 @@ body{
     grid-row-start: 1;
     grid-row-end: 101;
     background: var(--main-color);
-    transition: all 500ms cubic-bezier(1, 0, 0, 1) 0ms;
+    transition: all 1000ms cubic-bezier(1, 0, 0, 1) 0ms;
 }
 
 .title-app{
@@ -240,6 +241,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: all 1000ms cubic-bezier(1, 0, 0, 1) 0ms;
 }
 
 .title-app .part-1{
@@ -255,4 +257,51 @@ body{
     color: var(--main-color);
 }
 
+.scroll{
+    grid-column-start: 40;
+    grid-column-end: 50;
+    grid-row-start: 85;
+    grid-row-end: 95;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--light-color);
+    transition: all 800ms ease;
+}
+
+.scroll .letters{
+    transform: rotate(-90deg);
+    font-family: var(--main-font);
+    font-size: .8em;
+    font-weight: 300;
+}
+
+.scroll .icon{
+    animation: up-down 1.5s ease infinite;
+}
+
+/* animation */
+
+@keyframes up-down {
+    0% {transform: translateY(20px);}
+    25% {transform: translateY(0);}
+    100% {transform: translateY(20px);}
+}
+
+/* =========================================== sobre mi */
+
+.about-me{
+    grid-column-start: 10;
+    grid-column-end: 75;
+    grid-row-start: 10;
+    grid-row-end: 95;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    line-height: 1.5em;
+    text-align: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 500ms ease;
+}
 
