@@ -1,4 +1,5 @@
 @import url('var.css');
+@import url('transforms.css');
 
 /* ============================= estilos body */
 
@@ -27,6 +28,7 @@ body{
     right: 40px;
     height: 34px;
     width: 34px;
+    z-index: 13;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -84,7 +86,124 @@ body{
     transform: rotate(-45deg) translate(-11px , -11px);
 }
 
-/* estilos app */
+/* ================================================ estilos menu */
+
+.overlay-menu{
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-color);
+    transition: all 500ms cubic-bezier(1, 0, 0, 1) 0ms;
+}
+
+.borders>*{
+    transition: transform 500ms cubic-bezier(0.7, 0, 0.3, 1) 0ms;
+    position: fixed;
+    z-index: 100;
+    background: white;
+    height: 12px;
+    width: 28px;
+    pointer-events: none
+}
+
+.borders .top{
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform-origin: top center;
+    transform: translate(0, -100%) scale(1);
+
+}
+
+.borders .right{
+    top: 0;
+    right: 0;
+    height: 100%;
+    transform-origin: right center;
+    transform: translate(100%, 0) scale(1);
+}
+
+.borders .bottom{
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    transform-origin: bottom center;
+    transform: translate(0, 100%) scale(1);
+}
+
+
+
+.nav-menu{
+    width: 290px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 0 50px 40px;
+    transform: translateX();
+    transition: all 500ms cubic-bezier(1, 0, 0, 1) 0ms;
+}
+
+.nav-menu .social-networks .sn-item{
+    color: var(--font-main-color);
+    font-size: 1em;
+    margin-right: .5em;
+}
+
+.nav-menu .menu ul{
+    list-style: none;
+    padding: 0;
+}
+
+.nav-menu .menu ul li{
+    margin: 1em 0;
+}
+
+.nav-menu .menu .menu-item{
+    color: var(--font-main-color);
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.nav-menu .contact{
+    font-family: var(--secondary-font);
+}
+
+.nav-menu .contact .answer{
+    font-size: .7em;
+    font-weight: 300;
+    font-family: var(--main-font);
+    margin-bottom: -18px;
+    font-style: italic;
+}
+
+.nav-menu .contact h2{
+    font-size: 1.6em;
+    font-weight: 900;
+    font-family: var(--main-font);
+    letter-spacing: -1px;
+}
+
+.nav-menu .contact .number{
+    font-weight: 400;
+    margin-bottom: -10px;
+}
+
+.nav-menu .contact .mail{
+    font-weight: 400;
+}
+
+/* ================================================= estilos app */
 
 .app{
     display: grid;

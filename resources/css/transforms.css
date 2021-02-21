@@ -1,0 +1,21 @@
+
+/* animacion menu */
+
+.close-menu{
+    transform: translateX(-100%);
+}
+
+.open-menu{
+    transform: translateX(0);
+}
+.close-menu-overlay{
+    opacity: 0;
+}
+
+.open-menu-overlay{
+    opacity: 1;
+}
+
+.open-menu-borders>*{
+    transform: translate(0, 0%) scale(1) !important;
+}
