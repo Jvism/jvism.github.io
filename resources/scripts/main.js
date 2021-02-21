@@ -21,6 +21,8 @@ window.addEventListener("load", () => {
                 if (value > 0) {
                     if (scroll_value < 30) {
                         scroll_value += 1;
+
+                        
                     }
                 } else {
                     if (scroll_value > 0) {
@@ -38,7 +40,7 @@ window.addEventListener("load", () => {
         }, 1000);
     }
 
-    document.addEventListener("touchstart", (e) => {
+    window.addEventListener("touchstart", (e) => {
 
         startTouch = e.changedTouches[0].screenY;
 
@@ -48,7 +50,7 @@ window.addEventListener("load", () => {
 
         let direction_touchMove = startTouch - endTouch;
 
-        if(direction_touchMove > 150 || direction_touchMove < -150){
+        if(direction_touchMove > 100 || direction_touchMove < -100){
 
             scroll(canScroll,direction_touchMove);
         }
