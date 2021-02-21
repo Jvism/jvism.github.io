@@ -31,5 +31,5 @@ if(window.screen.width <= 768){
     window.addEventListener("resize",() => {
         menuDiv.setAttribute("style", "width:" + (window.screen.width - 85) + "px;")
     });
-}
+};
 
