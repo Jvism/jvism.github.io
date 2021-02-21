@@ -1,5 +1,11 @@
 @import url('var.css');
 
+/* ============================= estilos body */
+
+body{
+    background: var(--light-color);
+}
+
 /* ============================= estilos header */
 
 /* estilos logo */
@@ -17,17 +23,17 @@
 
 .navbar-toggle{
     position: fixed;
-    top: 15px;
+    top: 22px;
     right: 40px;
-    height: 48px;
-    width: 48px;
+    height: 34px;
+    width: 34px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: all .5s ease-in-out;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+    background: white;
 }
 
 .navbar-toggle .icon{
@@ -53,12 +59,12 @@
 
 .navbar-toggle .icon::before{
     width: 20px;
-    transform: translateY(-6px);
+    transform: translateY(-4px);
 }
 
 .navbar-toggle .icon::after{
     width: 16px;
-    transform: translateY(6px);
+    transform: translateY(4px);
 }
 
 /* ANIMATION */
@@ -78,8 +84,49 @@
     transform: rotate(-45deg) translate(-11px , -11px);
 }
 
-/* estilos bg-main */
+/* estilos app */
 
-.bg-main{
-
+.app{
+    display: grid;
+    grid-template-columns: repeat(100,1vw);
+    grid-template-rows: repeat(100,1vh);
 }
+
+/* estilos iniciales app */
+
+.bg-app{
+    grid-column-start: 1;
+    grid-column-end: 50;
+    grid-row-start: 1;
+    grid-row-end: 101;
+    background: var(--main-color);
+}
+
+.title{
+    grid-column-start: 15;
+    grid-column-end: 85;
+    grid-row-start: 15;
+    grid-row-end: 85;
+    color: var(--font-main-color);
+    font-family: var(--main-font);
+    font-size: 5em;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title .part-1{
+    margin-left: 16%;
+    margin-bottom: -.3em;
+}
+
+.title .part-2{
+    margin-left: 29%;
+}
+
+.title .part-2 .dot{
+    color: var(--main-color);
+}
+
+
