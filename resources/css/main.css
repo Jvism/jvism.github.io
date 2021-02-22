@@ -260,8 +260,8 @@ body{
 .scroll{
     grid-column-start: 40;
     grid-column-end: 50;
-    grid-row-start: 85;
-    grid-row-end: 95;
+    grid-row-start: 70;
+    grid-row-end: 85;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -296,12 +296,174 @@ body{
     grid-column-end: 75;
     grid-row-start: 10;
     grid-row-end: 95;
-    font-family: var(--secondary-font);
-    font-weight: 400;
+    font-size: .9em;
+    font-family: var(--main-font);
+    color: var(--font-main-color);
+    display: flex;
+    align-items: center;
+    font-weight: 700;
     line-height: 1.5em;
-    text-align: center;
+    text-align: left;
     overflow: hidden;
     opacity: 0;
     transition: all 500ms ease;
 }
 
+.about-me span{
+    color: var(--light-color);
+    font-weight: 400;
+}
+
+/* ==================================================== habilidades */
+
+.skills{
+    grid-column-start: 10;
+    grid-column-end: 90;
+    grid-row-start: 10;
+    grid-row-end: 75;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.skills .title-skills{
+    font-size: 1.2em;
+    font-weight: 900;
+    font-family: var(--main-font);
+    margin-bottom: 1.5em;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+}
+
+.skill{
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.2em;
+    transition: all .5s ease;
+    transform: translateY(-10%);
+    opacity: 0;
+}
+
+.skill .logo{
+    height: 90%;
+    width: 15%;
+}
+
+.skill .logo .svg-logo{
+    height: 100%;
+    width: 100%;
+}
+
+.skill .content{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill .content .description{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 .5em ;
+    height: 50%;
+}
+
+.skill .content .description .name{
+    font-family: var(--main-font);
+    font-weight: 400;
+    font-size: .9em;
+    color: var(--font-main-color);
+}
+
+.skill .content .description .porcentage{
+    font-family: var(--main-font);
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.skill .content .content-bar{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill .content .content-bar .bar{
+    width: 92%;
+    height: .5rem;
+    background: #fff;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px 0 rgb(7 33 66 / 15%);
+}
+
+.skill .content .content-bar .bar::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, #072142, #8c2b7a 50%, #ff4d5a);
+}
+
+.p-50::after{
+    width: 50%;
+}
+.p-60::after{
+    width: 60%;
+}
+.p-70::after{
+    width: 70%;
+}
+.p-80::after{
+    width: 80%;
+}
+.p-90::after{
+    width: 90%;
+}
+.p-100::after{
+    width: 100%;
+}
+
+.next-skills{
+    grid-column-start: 10;
+    grid-column-end: 90;
+    grid-row-start: 75;
+    grid-row-end: 90;
+    display: flex;
+    flex-direction: column;
+}
+
+.next-skills .title-next-skills{
+    font-size: 1.2em;
+    font-weight: 900;
+    font-family: var(--main-font);
+    margin-bottom: 1.5em;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .5s ease;
+}
+
+.next-skills .icons{
+    width: 100%;
+    display: flex;
+}
+
+.next-skills .icons .icon-ns{
+    width: 40px;
+    height: 40px;
+    margin-right: 1.2em;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: all .5s ease;
+}
+
+.next-skills .icons .icon-ns .svg-logo{
+    width: 100%;
+    height: 100%;
+}

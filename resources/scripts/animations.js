@@ -1,9 +1,17 @@
 function animation(scroll_value){
 
+    // all
     const bgApp = document.querySelector(".bg-app");
-    const titleApp = document.querySelector(".title-app");
-    const aboutMe = document.querySelector(".about-me");
+    // 0
     const scrollIcon = document.querySelector(".scroll"); 
+    const titleApp = document.querySelector(".title-app");
+    // 1
+    const aboutMe = document.querySelector(".about-me");
+    // 2
+    const skills = document.querySelectorAll(".skill");
+    const titleSkills = document.querySelector(".title-skills");
+    const titleNextSkills = document.querySelector(".title-next-skills");
+    const nextSkills = document.querySelectorAll(".icon-ns");
 
     if(scroll_value == 0){
         bgApp.setAttribute("style", "width: 50vw;");
@@ -17,5 +25,31 @@ function animation(scroll_value){
         titleApp.setAttribute("style", "transform: translateX(70%);");
         aboutMe.setAttribute("style", "transform: translateY(0); transition-delay: 500ms; opacity: 1;");
         scrollIcon.setAttribute("style", "opacity: 0; transition-delay: 0ms;");
+        skills.forEach(skill => {
+            skill.setAttribute("style", "transform: translateY(10%); opacity: 0;");
+        });
+        titleSkills.setAttribute("style", "transform: translateX(-50%); opacity: 0;");
+        titleNextSkills.setAttribute("style", "transform: translateX(-50%); opacity: 0;");
+        nextSkills.forEach((skill,index) => {
+            skill.setAttribute("style", "transform: translateY(20%); opacity: 0;")
+        });
     };
+
+    if(scroll_value == 2){
+        bgApp.setAttribute("style", "width: 100vw; background: #F5F5F5;");
+        titleApp.setAttribute("style", "transform: translate(70%, -110%);");
+        aboutMe.setAttribute("style", "transform: translateX(-120%); opacity: 0;");
+        skills.forEach((skill,index) => {
+            skill.setAttribute("style", "transform: translateY(0); opacity: 1;transition-delay:" + (500 + (150*index)) + "ms;")
+        });
+        titleSkills.setAttribute("style", "transform: translateX(0); opacity: 1;");
+        titleNextSkills.setAttribute("style", "transform: translateX(0); opacity: 1; transition-delay: 1500ms;");
+        nextSkills.forEach((skill,index) => {
+            skill.setAttribute("style", "transform: translateY(0); opacity: 1;transition-delay:" + (1500 + (150*index)) + "ms;")
+        });
+    };
+
+    if(scroll_value == 3){
+    };
+
 };

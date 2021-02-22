@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
             if(navMenu.classList.contains("close-menu")){
                 
                 if (value > 0) {
-                    if (scroll_value < 1) {
+                    if (scroll_value < 3) {
                         scroll_value += 1;
 
                         
