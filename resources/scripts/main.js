@@ -3,7 +3,7 @@ window.addEventListener("load", () => {
     const navMenu = document.querySelector(".nav-menu");
 
     let scroll_value = 0;
-    var canScroll = true;
+    let canScroll = true;
 
     // variables deteccion de arrastre
 
