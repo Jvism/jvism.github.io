@@ -20,6 +20,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: var(--main-font);
+    opacity: 0;
 }
 
 .title-loader{
@@ -31,6 +32,7 @@ body{
         position: fixed;
         width: 100vw;
         height: 100vh;
+        opacity: 1;
     }
 }
 
