@@ -7,6 +7,33 @@ body{
     background: var(--light-color);
 }
 
+/* =============================== estilos loader */
+
+.loader{
+    position: fixed;
+    z-index: 99;
+    width: 0;
+    height: 0;
+    background: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--main-font);
+}
+
+.title-loader{
+    font-size: 3em;
+}
+
+@media (min-width: 680px){
+    .loader{
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
 /* ============================= estilos header */
 
 /* estilos logo */
