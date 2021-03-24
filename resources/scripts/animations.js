@@ -5,6 +5,7 @@ function animation(scroll_value){
     // 0
     const scrollIcon = document.querySelector(".scroll"); 
     const titleApp = document.querySelector(".title-app");
+    const pageBeta = document.querySelector(".beta-page");
     // 1
     const aboutMe = document.querySelector(".brief-history");
     // 2
@@ -25,9 +26,15 @@ function animation(scroll_value){
         titleApp.setAttribute("style", "transform: translateX(0);");
         aboutMe.setAttribute("style", "transform: translateY(20%);");
         scrollIcon.setAttribute("style", "opacity: 1; transition-delay: 500ms;");
+        
+        pageBeta.setAttribute("style", "opacity: 1;");
     };
 
     if(scroll_value == 1){
+
+        //provisorio
+        pageBeta.setAttribute("style", "opacity: 0;");
+
         bgApp.setAttribute("style", "width: 100vw;");
         titleApp.setAttribute("style", "transform: translateX(70%);");
         aboutMe.setAttribute("style", "transform: translateY(0); transition-delay: 500ms; opacity: 1;");

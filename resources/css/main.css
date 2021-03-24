@@ -286,6 +286,17 @@ body{
     color: var(--main-color);
 }
 
+.beta-page{
+    grid-column-start: 15;
+    grid-column-end: 50;
+    grid-row-start: 15;
+    grid-row-end: 85;
+    color: var(--font-main-color);
+    font-family: var(--main-font);
+    font-size: 1.2em;
+    transition: all 1000ms cubic-bezier(1, 0, 0, 1) 0ms;
+}
+
 .scroll{
     grid-column-start: 40;
     grid-column-end: 50;
